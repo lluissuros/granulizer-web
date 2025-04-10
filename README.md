@@ -1,18 +1,62 @@
-# 🎛️ granulizer-web
+# 🎛️ Granulizer Web
 
-A browser-based granular synthesis app built with [Next.js](https://nextjs.org/), [Tone.js](https://tonejs.github.io/), and modern UI tools like Tailwind CSS, Radix UI, and React Knob. The goal is to experiment with creative audio manipulation and granular sound design — entirely in the browser.
+A browser-based granular synthesis app built with [Next.js](https://nextjs.org/), [Tone.js](https://tonejs.github.io/), and modern UI tools. Experiment with creative audio manipulation and granular sound design — entirely in the browser.
 
----
+## 🚀 Features
 
-## 🚀 Tech Stack
+- **Granular Synthesis** - Manipulate audio samples with grain size, overlap, and playback controls
+- **Real-time Controls** - Adjust parameters in real-time with intuitive UI controls
+- **Sample Loading** - Load and process your own audio samples
+- **Modern UI** - Built with Tailwind CSS and Radix UI components
 
-- **Next.js (App Router)** – Modern React framework for scalable frontend and future backend API routes.
-- **Tone.js** – Web Audio-based framework for synthesis and scheduling (GrainPlayer, Synths).
-- **Tailwind CSS** – Utility-first styling framework.
-- **Radix UI** – Accessible UI primitives for building polished interfaces.
-- **React Knob** – Headless rotary knobs for audio parameters.
-- **Motion** – Simple and performant animations using Web Animations API.
-- **(Optional)** NexusUI – Canvas-based audio controls (XY pads, multislider, etc.).
+## 🛠️ Tech Stack
+
+- **Next.js** - React framework with App Router
+- **Tone.js** - Web Audio framework for synthesis
+- **Tailwind CSS** - Utility-first styling
+- **Radix UI** - Accessible UI components
+- **React Knob** - Rotary controls for audio parameters
+
+## 🚀 Getting Started
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## 📝 Usage
+
+1. Navigate to the grain player page
+2. Click "Play" to start playback
+3. Adjust the controls to manipulate the sound:
+   - Grain Size: Controls the length of each grain
+   - Overlap: Determines how much grains overlap
+   - Playback Rate: Adjusts the speed of playback
+   - Detune: Modifies the pitch in cents
+   - Loop Start/End: Sets the loop points in the sample
+
+## 🎵 Audio Samples
+
+Place your audio samples in the `public/samples` directory. The app currently supports:
+- WAV files
+- MP3 files
+- Other browser-supported audio formats
+
+## 📚 Notes
+
+- Audio playback requires user interaction (browser autoplay policy)
+- The app uses the Web Audio API through Tone.js
+- All processing happens in real-time in the browser
+
+## 📄 License
+
+MIT
 
 ---
 
@@ -38,6 +82,8 @@ http://localhost:3000
 - ⏳ File loader for local audio samples
 - ⏳ Waveform viewer (planned: WaveSurfer or similar)
 - ⏳ Preset saving (future fullstack extension)
+
+
 
 ---
 

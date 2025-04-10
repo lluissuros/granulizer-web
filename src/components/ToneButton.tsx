@@ -14,8 +14,10 @@ export const ToneButton = () => {
   }, []);
 
   const handleStart = async () => {
-    await Tone.start(); // Required for iOS / modern browsers
-    setStarted(true);
+    if (!started) {
+      await Tone.start(); // Required for iOS / modern browsers
+      setStarted(true);
+    }
 
     const synth = new Tone.Synth().toDestination();
     synth.triggerAttackRelease('C4', '8n');
@@ -25,7 +27,7 @@ export const ToneButton = () => {
     <button
       className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
       onClick={handleStart}
-      disabled={started}
+      // disabled={started}
     >
       {started ? 'Played!' : 'Play Sound'}
     </button>
